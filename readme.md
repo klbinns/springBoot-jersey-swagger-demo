@@ -1,0 +1,1 @@
+Demo project to show integration between Spring Boot, Jersey 2, and Swagger2/Swagger UI

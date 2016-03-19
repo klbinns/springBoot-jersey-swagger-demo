@@ -13,4 +13,9 @@ public class StringManipulator {
 		return new StringData(input, reverse);
 	}
 	
+	public static StringData dropVowels(final String input){
+		String stringWithDroppedVowels = input.replaceAll("[AEIOUaeiou]", "");
+		return new StringData(input, stringWithDroppedVowels);
+	}
+	
 }

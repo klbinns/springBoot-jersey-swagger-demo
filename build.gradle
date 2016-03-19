@@ -28,6 +28,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-jersey")
     
     testCompile("org.springframework.boot:spring-boot-starter-test")
+    testCompile('org.assertj:assertj-core:3.3.0')
 }
 
 task wrapper(type: Wrapper) {
