@@ -30,7 +30,7 @@ public class StringManipulationIntegrationTest {
 	public void testStringForward() {
 		
 		ResponseEntity<StringData> entity = 
-				this.restTemplate.getForEntity("http://localhost:" + this.port + "/string/forward/forwardtest", StringData.class);
+				this.restTemplate.getForEntity("http://localhost:" + this.port + "/api/string/forward/forwardtest", StringData.class);
 		assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.OK);
 		assertThat(entity.getBody().getOutput()).isEqualTo("forwardtest");
 	}
@@ -39,7 +39,7 @@ public class StringManipulationIntegrationTest {
 	public void testStringReverse() {
 		
 		ResponseEntity<StringData> entity = 
-				this.restTemplate.getForEntity("http://localhost:" + this.port + "/string/reverse/reversetest", StringData.class);
+				this.restTemplate.getForEntity("http://localhost:" + this.port + "/api/string/reverse/reversetest", StringData.class);
 		assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.OK);
 		assertThat(entity.getBody().getOutput()).isEqualTo("tsetesrever");
 	}
@@ -48,7 +48,7 @@ public class StringManipulationIntegrationTest {
 	public void testStringDropVowel() {
 		
 		ResponseEntity<StringData> entity = 
-				this.restTemplate.postForEntity("http://localhost:" + this.port + "/string/dropVowels/dropvoweltest", null, StringData.class);
+				this.restTemplate.postForEntity("http://localhost:" + this.port + "/api/string/dropVowels/dropvoweltest", null, StringData.class);
 		assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.OK);
 		assertThat(entity.getBody().getOutput()).isEqualTo("drpvwltst");
 	}
