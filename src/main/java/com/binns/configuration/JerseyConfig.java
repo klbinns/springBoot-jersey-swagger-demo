@@ -27,7 +27,7 @@ public class JerseyConfig extends ResourceConfig {
         BeanConfig beanConfig = new BeanConfig();
         beanConfig.setVersion("0.1.0");
         beanConfig.setSchemes(new String[]{"http"});
-        beanConfig.setHost("http://localhost:8080");
+        //beanConfig.setHost(NetworkInterface.getNetworkInterface + "8080");
         beanConfig.setBasePath("/api");
         beanConfig.setResourcePackage("com.binns.endpoints");
         beanConfig.setPrettyPrint(true);
