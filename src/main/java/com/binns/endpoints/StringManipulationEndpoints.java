@@ -24,7 +24,7 @@ public class StringManipulationEndpoints {
 	@GET
 	@Produces("application/json")
 	@Path("forward/{input}")
-	public StringData forward(@ApiParam(value = "ID of the order that needs to be deleted", required = true) @PathParam("input") final String input) {
+	public StringData forward(@ApiParam(value = "The input string", required = true) @PathParam("input") final String input) {
 		return StringManipulator.forward(input);
 	}
 	
